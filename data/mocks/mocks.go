@@ -2,7 +2,7 @@ package mocks
 
 import (
 	"bytes"
-	"github.com/Pietroski/golang-VivaRealCrawler/domain/project_root"
+	"github.com/Pietroski/golang-VivaRealCrawler/internal/services/config/project_root"
 	"github.com/Pietroski/golang-notification/errors"
 	"io"
 	"io/ioutil"

@@ -2,7 +2,7 @@ package file_manager
 
 import (
 	"bufio"
-	"github.com/Pietroski/golang-VivaRealCrawler/domain/project_root"
+	"github.com/Pietroski/golang-VivaRealCrawler/internal/services/config/project_root"
 	"github.com/Pietroski/golang-notification/errors"
 	"os"
 	"path/filepath"
@@ -11,7 +11,7 @@ import (
 
 var (
 	FileManager IFileManager = &SFileManager{}
-	wg sync.WaitGroup
+	wg          sync.WaitGroup
 )
 
 // IFileManager is the FileManager package interface

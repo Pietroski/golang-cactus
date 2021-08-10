@@ -14,7 +14,7 @@ import (
 
 const (
 	Method = "GET"
-	URL    = "https://www.example.com"
+	URL    = "http://www.example.com"
 )
 
 var (
@@ -88,24 +88,24 @@ var NewCrawlerRequesterTestMap = map[int]NewCrawlerRequesterTestStruct{
 	0: {
 		input: NewCrawlerRequesterTestInputStruct{
 			Method: "GET",
-			URL:    "https://www.example.com",
+			URL:    "http://www.example.com",
 			Body:   mocks.ClientMock.MockIOReader(),
 		},
 		output: NewCrawlerRequesterTestOutputStruct{
 			Method: "GET",
-			URL:    "https://www.example.com",
+			URL:    "http://www.example.com",
 			Body:   mocks.ClientMock.MockIOReader(),
 		},
 	},
 	1: {
 		input: NewCrawlerRequesterTestInputStruct{
 			Method: "POST",
-			URL:    "https://www.another-example.com",
+			URL:    "http://www.another-example.com",
 			Body:   mocks.ClientMock.MockIOReader(),
 		},
 		output: NewCrawlerRequesterTestOutputStruct{
 			Method: "POST",
-			URL:    "https://www.another-example.com",
+			URL:    "http://www.another-example.com",
 			Body:   mocks.ClientMock.MockIOReader(),
 		},
 	},
@@ -230,7 +230,7 @@ func TestSetDefaultCrawlerRequester(t *testing.T) {
 
 func CrawlerDoTest() {
 	CrawlerClient.NewCrawlerClient()
-	CrawlerClient.SetDefaultCrawlerRequester("GET", "https://vivareal.com.br", nil)
+	CrawlerClient.SetDefaultCrawlerRequester("GET", "http://vivareal.com.br", nil)
 
 	CrawlerClient.CrawlerDo()
 }

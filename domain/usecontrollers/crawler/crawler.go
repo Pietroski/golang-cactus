@@ -2,8 +2,8 @@ package crawler
 
 import (
 	"fmt"
-	"github.com/Pietroski/golang-VivaRealCrawler/domain/usecontrollers/client"
-	"github.com/Pietroski/golang-VivaRealCrawler/domain/usecontrollers/file_manager"
+	"github.com/Pietroski/golang-VivaRealCrawler/internal/services/client"
+	"github.com/Pietroski/golang-VivaRealCrawler/internal/services/config/file_manager"
 	"github.com/Pietroski/golang-notification/errors"
 	"github.com/PuerkitoBio/goquery"
 	"net/http"
@@ -88,7 +88,7 @@ func (c *SCrawler) WriteBuildingsListFileToCrawl(filename string) {
 
 		stringLine := fmt.Sprintf("%v\n", value)
 
-		c.OutputFileClient.WriteToFile(c.OutputFilePath + "/" + filename, stringLine)
+		c.OutputFileClient.WriteToFile(c.OutputFilePath+"/"+filename, stringLine)
 		//fmt.Println("HERE ->", value)
 	})
 }

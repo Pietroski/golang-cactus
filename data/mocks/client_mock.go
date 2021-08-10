@@ -7,7 +7,7 @@ import (
 
 const (
 	Method = "GET"
-	URL    = "https://www.example.com"
+	URL    = "http://www.example.com"
 )
 
 var (

@@ -1,6 +1,6 @@
 package mocks
 
-import "github.com/Pietroski/golang-VivaRealCrawler/domain/usecontrollers/file_manager"
+import "github.com/Pietroski/golang-VivaRealCrawler/internal/services/config/file_manager"
 
 var (
 	FileManagerMocker IFileManagerMock = &SFileManager{}
